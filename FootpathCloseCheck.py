@@ -21,8 +21,8 @@ try:
           filtered = (line.replace('\r', '') for line in smexport)
 
           for row in csv.reader(filtered):
-              #print(row[74])
-              if row[74] == "Yes":
+              # #Column of FP Closure amended to meet DfT changes in Permits Export, removing the COVID column.
+              if row[73] == "Yes":
                   count += 1
                   print("FOOTPATH CLOSURE ON: ")
                   print(row[0])
